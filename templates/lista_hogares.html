@@ -95,7 +95,12 @@
 
     <div class="ml-80 flex-auto flex-center">
       <main class="py-10">
-        <h1 class="text-4xl font-bold mb-4 text-[#8AA626]">Hogares Temporales</h1>
+        <div class="flex justify-between pr-[10%] pb-10 pl-[5%]">
+          <h1 class="text-4xl font-bold mb-4 text-[#8AA626]">Hogares Temporales</h1>
+          <a type="button" class="flex items-center cursor-pointer rounded-full bg-[#B0BF78] px-4 py-2.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-[#D0D9B0] text-center	 text-justify	">Agregar hogar temporal</a>
+
+        </div>
+
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
            <!-- TARJETAS INICIO -->
             {%for hogar in hogares%}
@@ -111,10 +116,12 @@
              <p class="mb-3 font-normal dark:text-black"> Número de Contacto:{{hogar.contacto}}</p>
              <p class="mb-3 font-normal dark:text-black"> Animales que aceptamos:{{hogar.animales}}</p>
              <p class="mb-3 font-normal dark:text-black"> Datos extra sobre el hogar:{{hogar.datos}}</p>
-
+            
            </div>
               </a><br>
             {%endfor%}
+
+            
         </div>
       </main>
     </div>
