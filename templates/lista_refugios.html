@@ -97,25 +97,26 @@
 
   </div>
 
-    <div class="ml-80 flex flex-center">
+    <div class="ml-80 flex-auto flex-center">
       <main class="py-10">
+        <h1 class="text-4xl font-bold mb-4 text-[#8AA626]">Refugios</h1>
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <!-- TARJETAS INICIO -->
             {% for refugio in refugios%}
           <a href="#"
-            class="w-[100%] flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+            class="w-[95%] flex flex-col items-center bg-white border border-[#B0BF78] rounded-lg shadow md:flex-row md:xl hover:bg-[#D0D9B0] dark:border-[#B0BF78]  dark:bg-[#B0BF78] dark:hover:bg-[#D0D9B0]">
             <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
               src="https://i.pinimg.com/originals/3d/76/77/3d767775318552a6af66e19f269115cd.gif" alt="">
             <div class="flex flex-col justify-between p-4 leading-normal">
-              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Refugio {{refugio.nombre}}</h5>
-              <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white"> Ciudad {{refugio.ciudad}}</h5>
+              <h5 class="mb-3 text-2xl font-bold tracking-tightda rk:text-black">Refugio {{refugio.nombre}}</h5>
+              <h5 class="mb-3 text-2xl font-bold tracking-tightda rk:text-black"> Ciudad {{refugio.ciudad}}</h5>
 
-              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> Direccion:{{refugio.direccion}}</p>
-              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> Número de Contacto:{{refugio.contacto}}
+              <p class="mb-3 font-normal dark:text-black"> Direccion: {{refugio.direccion}}</p>
+              <p class="mb-3 font-normal dark:text-black"> Número de Contacto: {{refugio.contacto}}
               </p>
-              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> Animales que aceptamos: {{refugio.animales}} </p>
-              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> Actualmente contamos con {{refugio.cantidad}} animales </p>
-              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> Datos extra sobre el refugio: {{refugio.datos}}</p>
+              <p class="mb-3 font-normal dark:text-black"> Animales que aceptamos: {{refugio.animales}} </p>
+              <p class="mb-3 font-normal dark:text-black"> Actualmente contamos con "{{refugio.cantidad}}" animales </p>
+              <p class="mb-3 font-normal dark:text-black"> Datos extra sobre el refugio: {{refugio.datos}}</p>
 
             </div>
           </a> <br>
