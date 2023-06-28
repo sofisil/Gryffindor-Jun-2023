@@ -17,7 +17,7 @@
   <!-- Static sidebar for desktop -->
   <div class="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
     <!-- Sidebar component, swap this element with another sidebar if you like -->
-    <div class="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6 pb-4">
+    <div class="flex bg-[green] grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6 pb-4">
       <nav class="flex flex-1 flex-col">
         <div class="flex flex-col items-center">
           <img class="w-auto h-auto" src="./../static/img/logo.jpg" alt="Patitas">
@@ -61,7 +61,7 @@
                 </a>
               </li>
               <li>
-                <a href="#" class="text-black hover:text-[#3F6F8C] hover:bg-[#ecfdf5] group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
+                <a href="{{url_for('lista_campana')}}" class="text-black hover:text-[#3F6F8C] hover:bg-[#ecfdf5] group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
                   <svg class="h-6 w-6 shrink-0 text-[#403634] group-hover:text-[#8AA626]" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
                     <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
