@@ -71,6 +71,9 @@ def index():
 def login():
     return render_template('login.html')
 
+@app.route('/')
+def ingresar():
+    return render_template('login.html')
 
 @app.route("/cargar_datos_veterinarias", methods=["GET", "POST"])
 def cargar_datos_veterinarias():

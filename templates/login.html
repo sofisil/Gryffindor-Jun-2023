@@ -45,14 +45,15 @@
                         
                         <input type="password" placeholder="Contraseña" name="password" required>
                         
-                        <button type="submit" title="Ingresar" name="Ingresar">Login</button>
+                        <button type="submit" title="Ingresar" name="Ingresar" formaction="{{ url_for('index')}}">Login</button>
+                        
                     </form>
                     <div class="pie-form">
                         <a href="#">¿No tienes Cuenta? Registrate</a>
                     </div>
                 </div>
                 <div class="inferior">
-                    <a href="#">Volver</a>
+                    <a href="{{ url_for('index')}}">Volver</a>
                 </div>
             </div>
         </div>
