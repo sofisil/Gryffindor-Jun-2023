@@ -6,23 +6,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
 
-class User (db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String, nullable=False)
-    email = db.Column(db.String(256))
-    password = db.Column(db.String, nullable=False)
 
-    def __init__(self, username, email, password):
-        self.username = username
-        self.email = email
-        self.password = password
-    
-
-class User_1(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    user_name = db.Column(db.String, unique=True, nullable=False)
-    user_email = db.Column(db.String)
-    user_password = db.Column(db.String)
 
 class Datos_veterinarias(db.Model):
       id = db.Column(db.Integer, primary_key=True)
@@ -84,17 +68,7 @@ def index():
 
 
 
-@app.route("/create", methods=["GET", "POST"])
-def create():
-    if request.method == "POST":
-        username = request.form["username"]
-        email = request.form["email"]
-        password = request.form["pass"]
-        new_user = User(username, email, password)
-        db.session.add(new_user)
-        db.session.commit()
-        return redirect(url_for('admin'))
-    return render_template('create.html')
+
 
 
 @app.route("/cargar_datos_veterinarias", methods=["GET", "POST"])
@@ -147,11 +121,7 @@ def cargar_datos_hogares():
     return render_template('cargar_datos_hogares.html')
 
 
-@app.route('/admin')
-def admin():
-    users = User.query.all()
-    print(users)
-    return render_template('admin.html', users=users)
+
 
 @app.route("/lista_hogares")
 def lista_hogares(): 
@@ -167,6 +137,11 @@ def lista_veterinarias():
 def lista_refugios(): 
     refugios = Datos_refugios.query.all()
     return render_template('lista_refugios.html', refugios=refugios)
+
+@app.route('/campanas')
+def campanas(): 
+    return render_template('campanas.html')
+
 #CREAMOS LA BASE
 with app.app_context():
     db.create_all(bind_key='__all__')
