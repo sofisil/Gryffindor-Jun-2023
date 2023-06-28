@@ -67,8 +67,9 @@ def index():
     return render_template('index.html')
 
 
-
-
+@app.route('/login')
+def login():
+    return render_template('login.html')
 
 
 @app.route("/cargar_datos_veterinarias", methods=["GET", "POST"])
