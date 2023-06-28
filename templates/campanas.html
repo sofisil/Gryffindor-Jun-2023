@@ -80,10 +80,10 @@
     <div>
         <div class="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
           <!-- Sidebar component, swap this element with another sidebar if you like -->
-          <div class="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6 pb-4">
+          <!-- <div class="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6 pb-4"> -->
             <nav class="flex flex-1 flex-col">
               <div class="flex flex-col items-center">
-                <img class="w-auto h-auto" src="./../static/img/logo.png" alt="Patitas">
+                <img class="w-auto" src="./../static/img/logo.png" alt="Patitas">
                 <a href="#" class="text-xl text-black front-semibold"> Dame una pata</a>
               </div>
               <ul role="list" class="flex flex-1 flex-col gap-y-7">
@@ -124,7 +124,7 @@
                       </a>
                     </li>
                     <li>
-                      <a href="{{url_for('campanas')}}" class="text-black hover:text-[#3F6F8C] hover:bg-[#ecfdf5] group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
+                      <a href="#" class="text-black hover:text-[#3F6F8C] hover:bg-[#ecfdf5] group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
                         <svg class="h-6 w-6 shrink-0 text-[#403634] group-hover:text-[#8AA626]" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                           <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
                           <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
@@ -137,11 +137,11 @@
               </ul>
             </nav>
           </div>
-        </div>
-      
+    </div>
+<!--       
         <div class="lg:pl-72">
           <div class="sticky top-0 z-40 lg:mx-auto lg:max-w-7xl lg:px-8">
-            <div class="flex h-16 items-center gap-x-4 border-b border-gray-200 bg-white px-4 shadow-sm sm:gap-x-6 sm:px-6 lg:px-0 lg:shadow-none">
+            <div class="flex h-16 items-center gap-x-4 border-b border-white bg-white px-4 shadow-sm sm:gap-x-6 sm:px-6 lg:px-0 lg:shadow-none">
               <button type="button" class="-m-2.5 p-2.5 text-gray-700 lg:hidden">
                 <span class="sr-only">Open sidebar</span>
                 <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
@@ -149,28 +149,28 @@
                 </svg>
               </button>
       
-              <!-- Separator -->
-              <div class="h-6 w-px bg-white lg:hidden" aria-hidden="true"></div>
-      
+               Separator -->
+              <!-- <div class="h-6 w-px bg-white lg:hidden" aria-hidden="true"></div> -->
+<!--       
               <div class="flex flex-1 gap-x-4 self-stretch lg:gap-x-6">
-             </div>
-                </div>
+             </div> -->
+                <!-- </div>
               </div>
             </div>
-          </div>
+          </div> -->
           
   <!-- Swiper -->
-  <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" space-between="30"
+  <swiper-container class="w-[50%] bg-white mySwiper" pagination="true" pagination-clickable="true" navigation="true" space-between="30"
     centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
-    <swiper-slide><img class="object-contain h-74 w-74" src="../static/images/campa6.jpeg" alt="Image"></swiper-slide>
-    <swiper-slide><img class="object-contain h-74 w-74" src="../static/images/campa3.jpeg" alt="Image"></swiper-slide>
-    <swiper-slide><img class="object-contain h-74 w-74" src="../static/images/campa4.jpeg" alt="Image"></swiper-slide>
-    <swiper-slide><img class="object-contain h-74 w-74" src="../static/images/campa5.jpeg" alt="Image"></swipeh-64 w-64r-slide>
+    <swiper-slide><img class="object-contain h-74 w-74" src="../static/img/campa3.jpeg" alt="Image"></swiper-slide>
+    <swiper-slide><img class="object-contain h-74 w-74" src="../static/img/campa4.jpeg" alt="Image"></swiper-slide>
+    <swiper-slide><img class="object-contain h-74 w-74" src="../static/img/campa5.jpeg" alt="Image"></swiper-slide>
+    <swiper-slide><img class="object-contain h-74 w-74" src="../static/img/campa6.jpeg" alt="Image"></swipeh-64 w-64r-slide>
     <div class="autoplay-progress" slot="container-end">
       <svg viewBox="0 0 48 48">
         <circle cx="24" cy="24" r="20"></circle>
       </svg>
-      <span></span>
+      <!-- <span></span> -->
     </div>
   </swiper-container>
 
@@ -179,8 +179,8 @@
 
   <!-- Initialize Swiper -->
   <script>
-    const progressCircle = document.querySelector(".autoplay-progress svg");
-    const progressContent = document.querySelector(".autoplay-progress span");
+    // const progressCircle = document.querySelector(".autoplay-progress svg");
+    // const progressContent = document.querySelector(".autoplay-progress span");
 
     const swiperEl = document.querySelector("swiper-container");
     swiperEl.addEventListener("autoplaytimeleft", (e) => {
